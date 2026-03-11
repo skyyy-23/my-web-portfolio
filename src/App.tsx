@@ -211,7 +211,7 @@ function App() {
   }, [])
 
   const navItems: { href: string; label: string; icon: LucideIcon }[] = [
-    { href: '#hero', label: 'Home', icon: Home },
+    { href: '#', label: 'Home', icon: Home },
     { href: '#about', label: 'About', icon: UserRound },
     { href: '#skills', label: 'Skills', icon: Wrench },
     { href: '#projects', label: 'Projects', icon: FolderCode },
@@ -239,7 +239,7 @@ function App() {
   return (
     <div className="site-shell">
       <header className="topbar">
-        <a className="brand" href="#hero" aria-label="Go to homepage" onClick={closeMenu}>
+        <a className="brand" href="#" aria-label="Go to homepage" onClick={closeMenu}>
           SK
         </a>
 
@@ -296,7 +296,7 @@ function App() {
       </header>
 
       <main>
-        <section id="hero" className="hero section reveal">
+        <section id="#" className="hero section reveal">
           <div className="hero-frame">
             <div className="accent-dots" aria-hidden="true">
               <span />
