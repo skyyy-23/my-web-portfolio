@@ -365,7 +365,7 @@ function App() {
                 <span className="sr-only">Email</span>
               </a>
             </div>
-            <img src={resume} alt="Profile" />
+            <img src={resume} alt="Profile"/>
           </div>
         </section>
 
