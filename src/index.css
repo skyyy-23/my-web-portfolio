@@ -172,7 +172,15 @@ p {
   border-top: 0;
   padding-top: 2rem;
 }
-
+img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 50px;
+  right: 60px;
+}
 .hero-frame {
   position: relative;
   overflow: hidden;
@@ -436,7 +444,7 @@ p {
 }
 
 .mini-label {
-  margin: 0.2rem 0 0.35rem;
+  margin: 0.5rem 0;
   color: var(--primary);
   font-size: 0.68rem;
   letter-spacing: 0.09em;
@@ -448,7 +456,10 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
+}
+.project-card .mini-label {
+  margin: 0;
 }
 
 .tag {

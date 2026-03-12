@@ -1,4 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
+import resume from './assets/resume pic.jpg';
 import type { FormEvent } from 'react'
 import {
   BriefcaseBusiness,
@@ -73,6 +74,10 @@ const skillGroups: SkillGroup[] = [
     items: ['Git', 'GitHub', 'VS Code', 'Postman', 'Figma', 'Canva', 'Unity'],
   },
   {
+    category: 'Deployment & Cloud Tools',
+    items: ['Render', 'Vercel', 'Docker'],
+  },
+  {
     category: 'Other Skills',
     items: ['UI/UX Design', 'REST API Development', 'MVC Architecture', 'Responsive Web Design'],
   },
@@ -82,7 +87,7 @@ const projects: Project[] = [
   {
     title: 'Franchise Health Monitoring System',
     description:
-      'A centralized monitoring dashboard that tracks branch performance, health scores, and operational trends for franchise management.',
+      'A centralized monitoring analytics dashboard that tracks branch performance with health scores, and operational trends from AI Insights for franchise management.',
     technologies: ['PHP', 'Supabase', 'jQuery', 'GroqL', 'ClickHouse'],
     features: [
       'Automated health score computation',
@@ -90,8 +95,8 @@ const projects: Project[] = [
       'Management-ready dashboard reporting',
       'Live data integration for real-time monitoring',
     ],
-    github: 'https://github.com/your-username/franchise-health-monitoring-system',
-    liveDemo: 'http://localhost/Franchise%20Health%20module/index.php',
+    github: 'https://github.com/skyyy-23/ff-analytics-v2',
+    liveDemo: 'https://ff-analytics-v2.onrender.com/',
   },
   {
     title: 'ShopHub E-commerce website',
@@ -296,7 +301,7 @@ function App() {
       </header>
 
       <main>
-        <section id="#" className="hero section reveal">
+        <section id="#" className="hero-section-reveal">
           <div className="hero-frame">
             <div className="accent-dots" aria-hidden="true">
               <span />
@@ -360,6 +365,7 @@ function App() {
                 <span className="sr-only">Email</span>
               </a>
             </div>
+            <img src={resume} alt="Profile" />
           </div>
         </section>
 
@@ -470,7 +476,7 @@ function App() {
                       <span className="sr-only">Live Demo</span>
                     </a>
                   ) : (
-                    <span className="disabled-link">Live Demo: Available on request</span>
+                    <span className="disabled-link">Live Demo is currently unavailable</span>
                   )}
                 </div>
               </article>
