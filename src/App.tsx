@@ -85,7 +85,7 @@ const skillGroups: SkillGroup[] = [
 
 const projects: Project[] = [
   {
-    title: 'Franchise Health Monitoring System',
+    title: 'Franchise Analytics Monitoring System',
     description:
       'A centralized monitoring analytics dashboard that tracks branch performance with health scores, and operational trends from AI Insights for franchise management.',
     technologies: ['PHP', 'Supabase', 'jQuery', 'GroqL', 'ClickHouse'],
