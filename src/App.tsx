@@ -1,5 +1,6 @@
 ﻿import { useEffect, useState } from 'react'
 import resume from './assets/resume pic.jpg';
+import resumedark from './assets/resume pic dark mode.png';
 import type { FormEvent } from 'react'
 import {
   BriefcaseBusiness,
@@ -63,7 +64,7 @@ const skillGroups: SkillGroup[] = [
   },
   {
     category: 'Backend Technologies',
-    items: ['Laravel', 'PHP MVC', 'Express.js'],
+    items: ['Laravel', 'PHP MVC', 'Node.js'],
   },
   {
     category: 'Database Technologies',
@@ -71,7 +72,7 @@ const skillGroups: SkillGroup[] = [
   },
   {
     category: 'Development Tools',
-    items: ['Git', 'GitHub', 'VS Code', 'Postman', 'Figma', 'Canva', 'Unity'],
+    items: ['Git', 'GitHub', 'VS Code', 'Postman', 'Thunder Client', 'Figma', 'Canva', 'Unity'],
   },
   {
     category: 'Deployment & Cloud Tools',
@@ -110,6 +111,19 @@ const projects: Project[] = [
     ],
     github: 'https://github.com/your-username/crud-web-app-suite',
     liveDemo: 'http://localhost:5174/',
+  },
+  {
+    title: 'Flowful Task Manangement System',
+    description:
+      'A task management system designed to help users organize and prioritize their daily activities with a focus on productivity and efficiency.',
+    technologies: ['React js', 'Node.js', 'MongoDB'],
+    features: [
+      'User-friendly task creation and organization',
+      'Priority-based task sorting and filtering',
+      'Real-time updates and notifications for task deadlines',
+    ],
+    github: 'https://github.com/skyyy-23/flowful-management-tool.git',
+    liveDemo: '',
   },
   {
     title: 'AR Indoor Navigation System',
@@ -365,7 +379,11 @@ function App() {
                 <span className="sr-only">Email</span>
               </a>
             </div>
-            <img src={resume} alt="Profile"/>
+            {theme === 'light' ? (
+              <img src={resume} alt="Profile"/>
+            ) : (
+              <img src={resume} alt="Profile"/>
+            )}
           </div>
         </section>
 

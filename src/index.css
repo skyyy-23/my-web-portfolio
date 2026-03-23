@@ -173,13 +173,13 @@ p {
   padding-top: 2rem;
 }
 img{
-  width: 300px;
+  width: 250px;
   height: 300px;
-  border-radius: 50%;
+  border-radius: 20px;
   object-fit: cover;
   position: absolute;
   top: 50px;
-  right: 60px;
+  right: 70px;
 }
 .hero-frame {
   position: relative;
