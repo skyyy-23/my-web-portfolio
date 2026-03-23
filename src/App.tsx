@@ -1,6 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
 import resume from './assets/resume pic.jpg';
-import resumedark from './assets/resume pic dark mode.png';
 import type { FormEvent } from 'react'
 import {
   BriefcaseBusiness,
@@ -379,11 +378,7 @@ function App() {
                 <span className="sr-only">Email</span>
               </a>
             </div>
-            {theme === 'light' ? (
-              <img src={resume} alt="Profile"/>
-            ) : (
-              <img src={resume} alt="Profile"/>
-            )}
+            <img src={resume} alt="Profile"/>
           </div>
         </section>
 
