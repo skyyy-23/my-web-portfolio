@@ -175,15 +175,20 @@ p {
 img{
   width: 250px;
   height: 300px;
-  border-radius: 20px;
+  border-radius: 35px 15px;
   object-fit: cover;
-  position: absolute;
-  top: 50px;
-  right: 70px;
+  border: 2.5px solid var(--primary);
+}
+.img-dark{
+  border: 2.5px solid white;
+}
+.hero-image{
+  display: flex;
+  align-items: center;
 }
 .hero-frame {
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: clamp(1.3rem, 3vw, 2.4rem);
@@ -254,7 +259,6 @@ img{
 
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.62rem;
   margin-top: 1.1rem;
 }
@@ -302,7 +306,6 @@ img{
 
 .social-links {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.62rem;
   margin-top: 1rem;
 }
@@ -643,5 +646,38 @@ a:focus-visible {
 
   .nav-links.open {
     display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 300px) and (max-width: 700px) {
+  img{
+    width: 150px;
+    height: 170px;
+  }
+  .hero-image{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+  .accent-dots span{
+    width: 0.32rem;
+    height: 0.32rem;
+  }
+  .accent-dots{
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .eyebrow, .hero-title, .hero-description{
+    font-size: 0.75rem;
+  }
+  .eyebrow{
+    margin-bottom: 0;
+  }
+  h1{
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .hero-frame {
+    flex-direction: column-reverse;
   }
 }

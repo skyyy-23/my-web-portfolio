@@ -316,69 +316,81 @@ function App() {
       <main>
         <section id="#" className="hero-section-reveal">
           <div className="hero-frame">
-            <div className="accent-dots" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </div>
-
-            <p className="eyebrow">Looking for full-time opportunities</p>
-            <h1>{profile.fullName}</h1>
-            <p className="hero-title">{profile.title}</p>
-            <p className="hero-description">{profile.description}</p>
-
-            <div className="hero-actions">
-              <a
-                href="#projects"
-                className="btn btn-primary icon-btn"
-                aria-label="View Projects"
-                title="View Projects"
-              >
-                <FolderGit2 size={18} aria-hidden="true" />
-                <span className="sr-only">View Projects</span>
-              </a>
-              <a
-                href="/Alipao%20Resume.pdf"
-                className="btn btn-secondary icon-btn"
-                download="Alipao Resume.pdf"
-                aria-label="Download Resume"
-                title="Download Resume"
-              >
-                <Download size={18} aria-hidden="true" />
-                <span className="sr-only">Download Resume</span>
-              </a>
-              <a
-                href="#contact"
-                className="btn btn-ghost icon-btn"
-                aria-label="Contact Me"
-                title="Contact Me"
-              >
-                <Send size={18} aria-hidden="true" />
-                <span className="sr-only">Contact Me</span>
-              </a>
-            </div>
-
-            <div className="social-links" aria-label="Professional profiles">
-              <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
-                <Github size={18} aria-hidden="true" />
-                <span className="sr-only">GitHub</span>
-              </a>
-              <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
-                <Linkedin size={18} aria-hidden="true" />
-                <span className="sr-only">LinkedIn</span>
-              </a>
-              <a
-                href={getGmailComposeUrl(profile.email)}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Email"
-                title="Email"
-              >
-                <Mail size={18} aria-hidden="true" />
-                <span className="sr-only">Email</span>
-              </a>
-            </div>
-            <img src={resume} alt="Profile"/>
+            <div className='hero-wrapper'>
+                <div className='header'>
+                  <div className="accent-dots" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  <div className='hero-title-description'>
+                    <p className="eyebrow">Looking for full-time opportunities</p>
+                    <h1>{profile.fullName}</h1>
+                    <p className="hero-title">{profile.title}</p>
+                    <p className="hero-description">{profile.description}</p>
+                  </div>
+                </div>
+            
+                <div className='body'>
+                    <div className="hero-actions">
+                      <a
+                        href="#projects"
+                        className="btn btn-primary icon-btn"
+                        aria-label="View Projects"
+                        title="View Projects"
+                      >
+                        <FolderGit2 size={18} aria-hidden="true" />
+                        <span className="sr-only">View Projects</span>
+                      </a>
+                      <a
+                        href="/Alipao%20Resume.pdf"
+                        className="btn btn-secondary icon-btn"
+                        download="Alipao Resume.pdf"
+                        aria-label="Download Resume"
+                        title="Download Resume"
+                      >
+                        <Download size={18} aria-hidden="true" />
+                        <span className="sr-only">Download Resume</span>
+                      </a>
+                      <a
+                        href="#contact"
+                        className="btn btn-ghost icon-btn"
+                        aria-label="Contact Me"
+                        title="Contact Me"
+                      >
+                        <Send size={18} aria-hidden="true" />
+                        <span className="sr-only">Contact Me</span>
+                      </a>
+                    </div>
+          
+                    <div className="social-links" aria-label="Professional profiles">
+                      <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
+                        <Github size={18} aria-hidden="true" />
+                        <span className="sr-only">GitHub</span>
+                      </a>
+                      <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                        <Linkedin size={18} aria-hidden="true" />
+                        <span className="sr-only">LinkedIn</span>
+                      </a>
+                      <a
+                        href={getGmailComposeUrl(profile.email)}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Email"
+                        title="Email"
+                      >
+                        <Mail size={18} aria-hidden="true" />
+                        <span className="sr-only">Email</span>
+                      </a>
+                    </div>
+                 </div>
+              </div>
+              <div className='hero-image'>
+                {theme === 'light' ?
+                (<img src={resume} alt="Profile picture" />) 
+                : (<img src={resume} alt="Profile picture" className='img-dark'/>)
+                }
+              </div>
           </div>
         </section>
 
